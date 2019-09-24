@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Quicksand', san-serif;
+}
+header{
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 10%;
+  height : 100px;
+  font-weight: normal;
+  border-bottom: 1px solid #80ccff;
+}
+.headerStud {
+  font-size: 2em;
+  float: left;
+  margin: 30px;
+}
+.addStud {
+  float : right;
+  width: 10%;
+  height : 36px;
+  border: 1px solid #e2e2e2;
+  background-color: #fff;
+  padding : 0;
+  margin: 32px 0;
+}
+.addStud:hover {
+  background-color: #0099ff;
+  color : #fff;
+  font-weight: bold;
+}
+.listDiv {
+  padding: 50px;
+  width : 100%;
+}
+.listitem {
+  border : 1px solid grey;
+  height : 50px;
+  width : 100%;
+  margin : 10px 0;
+  background-color: lightgray;
+}
+.listname {
+  width: 35%;
+  float: left;
+  height: 20px;
+  margin : 15px 0;
+  padding-left: 20px;
+}
+.listid {
+  width: 35%;
+  float: left;
+  height: 20px;
+  margin : 15px 0;
+}
+.listdetail {
+  width : 10%;
+  height : 30px;
+  float : left;
+}
+.listedit {
+  width : 10%;
+  height : 30px;
+  float : left;
+}
+.listbut {
+  border : none;
+  background-color: #fff;
+  margin : 7px 0;
+}
+.addDiv {
+  z-index: 1;
+  background: #fff;
+  position : fixed;
+  display:none;
+  top : 20%;
+  left : 28%;
+  height: 480px;
+  width: 650px;
+  padding : 10px;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  box-shadow:1px 1px 10px #999;
+}
+.showaddDiv {
+  display : block;
+}
+.addHead{
+  width : 100%;
+  padding-left: 10%;
+  padding-right: 2%;
+  height : 40px;
+  border-bottom: 1px solid #80ccff;
+}
+.addHeading {
+  height : 40px;
+  display : inline-block;
+  float : left;
+  vertical-align: middle;
+  margin: 0;
+  font-size: 1.3em;
+}
+.addBut {
+  float : right;
+  border : none;
+  color : red;
+  background-color: #fff;
+}
+.addBody {
+  padding: 30px 0;
+  border-bottom: 1px solid #80ccff;
+}
+.addTable{
+  width : 100%;
+  padding: 10px;
+}
+.addTable tr td input{
+  border : 1px solid #e1e1e1;
+}
+.addTable tr td {
+  padding : 10px 0;
+}
+.errorId {
+  color : red;
+  display : none;
+  width :100px;
+  font-size: 0.7em;
+}
+.addFooter {
+  margin-top: 20px;
+  padding: 0 40% 0 40%;
+}
+.fbutton {
+  background-color: #fff;
+  width : 100%;
+  height : 26px;
+  border: none;
+  font-weight: bold;
+  color: #0099ff;
+  display: block
+}
+.fbutton:hover {
+  color : #fff;
+  background-color: #0099ff;
+}
+.showelement {
+  display:block;
+}
+.nostud{
+  font-size: 20px;
+  padding-left: 100px;
+  display : none;
+}

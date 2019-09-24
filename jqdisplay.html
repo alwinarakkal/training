@@ -1,0 +1,53 @@
+
+<html>
+<head>
+<title>JSON Display</title>
+<style>
+  #flip {
+
+  padding: 5px;
+
+  text-align: center;
+
+  background-color: #e5eecc;
+
+  border: solid 1px #c3c3c3;
+
+}
+
+#bd {
+  background-color: lightgray;
+  padding: 50px;
+  display: none;
+   text-align: center;
+}
+  </style>
+
+</head>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+  $("#flip").click(function(){
+    $("#bd").slideToggle("slow");
+  }); 
+
+    $.get('https://jsonplaceholder.typicode.com/posts', function(data){
+   
+    $.each(data, function(key,item){
+        $('#bd').append($('<h3 style="text-align:left">USER ID: '+item.userId+' </h3>'));
+        $('#bd').append($('<h3 style="text-align:left">ID: '+item.id+' </h3>'));
+        $('#bd').append($('<h3 style="text-align:left">Title: '+item.title+' </h3>'));
+        $('#bd').append($('<h3 style="text-align:left">Body: '+item.body+' </h3>'));
+    })
+
+    })
+})
+</script>
+<div id="flip">Click to show contents of file</div>
+<div id="bd"></div>
+</body>
+</html>

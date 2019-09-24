@@ -1,0 +1,20 @@
+
+table {
+  font-family: arial;
+  border-collapse: collapse;
+  width: 40%;
+}
+th{color:white;}
+td, th {
+  text-align: left;
+  padding: 8px;
+  border-left:1px solid black;
+
+  }
+  th{background-color:  #8cd98c;  }
+tr:nth-child(odd) {
+text-align: left;
+
+  background-color: rgb(275, 255, 230);
+  
+}

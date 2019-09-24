@@ -1,0 +1,76 @@
+<html>
+<head>
+ <title>Student Registration</title>
+ <style>
+body {background-color:lightgray;padding:30px;}
+form   {color: black;margin-top:50px;padding: 50px;background-color: grey}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding:5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 20px 300px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+ <script>
+  function check() {
+   var x, y, numcheck, z, mailcheck, Age, a;
+
+  // Get the value of the input field with id="numb"
+  x = document.getElementById("age").value;
+  y = document.getElementById("mob").value;
+  z = document.getElementById("name").value;
+  a = document.getElementById("email").value;
+
+  if (isNaN(z)==false){
+    alert("Name required");
+  }
+
+ 
+
+  mailcheck = a.includes("@");
+  if (mailcheck == false){
+   alert("Not a valid email");
+ }
+
+ numcheck = y.includes(+91);
+  //alert(numcheck);
+  if (numcheck == false && y!=''){
+   //alert(y);
+   alert("Not an Indian Number. Begin with +91.");
+ }
+
+  // If x is Not a Number or less than one or greater than 10
+  if (isNaN(x) || x > 1 && x < 110) {
+   /*text = "Input OK";*/
+     //alert("Input OK");
+   } else {
+     /*text = "Input not Valid";*/
+     alert("Age Not Ok");
+   }
+ }
+</script>
+<form>
+<fieldset>
+    <legend style="color:orange;font-size:40px;"><b>Registration Form:</b></legend>
+    Name: <input type="text" id="name"><br>
+    Email: <input type="text" id="email"><br>
+   Age: <input type="numbers" id="age"><br>
+  Mobile Number: <input type="numbers" id="mob">
+  <br>
+ <button class="button" onclick="check()">Submit</button>
+</fieldset>
+</form>
+</body>
+</html>
+
+  
+  
+  

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+.button {
+  display: block;
+  margin: 1px 40px;
+  padding: 10px 10px;
+  width: 100px;
+  height:50px;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  border-radius: 20px;
+}
+.button:hover {
+  background-color: black;
+  color:yellow;
+  font-size:40px;
+}
+
+.control{
+float:left;
+margin-left: 200px;
+margin-top: 20px;
+  padding-top: 10px;
+  padding-left:80px;
+  width:300px;
+  height:450px;
+  background-color:gray;
+    border-radius: 50px;
+  
+}
+
+.traffic-light {
+float:right;
+  margin: 30px 0;
+  padding: 20px;
+  width: 200px;
+  height: 550px;
+  background-color:black;
+  border-radius: 50px;
+}
+
+#stoplight{
+  background-color: red;
+   margin-left:20px;
+  margin-top: 20px;
+  width: 150px;
+  height: 160px;
+  border-radius: 50%;
+  opacity:0.2;
+}
+#slowlight{
+  background-color: yellow;
+   margin-left:20px;
+  margin-top: 20px;
+  width: 150px;
+  height: 160px;
+  border-radius: 50%;
+  opacity:0.2;
+}
+#golight{
+  background-color: green;
+   margin-left:20px;
+  margin-top: 20px;
+  width: 150px;
+  height: 160px;
+  border-radius: 50%;
+  opacity:0.2;
+}
+
+</style>
+
+</head>
+
+<body>
+  <script>
+    var normal,mblink,x,y;
+  
+function gored(){
+  red=document.getElementById("stoplight");
+  yellow=document.getElementById("slowlight");
+  green=document.getElementById("golight");
+     red.style.opacity=1;
+     yellow.style.opacity=0.2;
+     green.style.opacity=0.2;
+  }
+function goyellow(){
+  red=document.getElementById("stoplight");
+  yellow=document.getElementById("slowlight");
+  green=document.getElementById("golight");
+     red.style.opacity=0.2;
+     yellow.style.opacity=1;
+     green.style.opacity=0.2;
+  }
+  function gogreen(){
+  red=document.getElementById("stoplight");
+  yellow=document.getElementById("slowlight");
+  green=document.getElementById("golight");
+     red.style.opacity=0.2;
+     yellow.style.opacity=0.2;
+     green.style.opacity=1;
+   }
+   function off(){
+  red=document.getElementById("stoplight");
+  yellow=document.getElementById("slowlight");
+  green=document.getElementById("golight");
+     red.style.opacity=0.1;
+     yellow.style.opacity=0.1;
+     green.style.opacity=0.1;
+   }
+   function blink(){
+    
+      red = document.getElementById("stoplight");
+      yellow = document.getElementById("slowlight");
+      green = document.getElementById("golight");
+      red.style.opacity=0.3;
+     yellow.style.opacity=0.3;
+     green.style.opacity=0.3;
+          
+
+          setTimeout(function(){green.style.opacity=.3;red.style.opacity=.3;yellow.style.opacity=1;},1000);     
+    }
+    function normal()
+    { 
+      gored();
+      setTimeout(goyellow, 3000);
+      setTimeout(gogreen, 4000);
+      setTimeout(goyellow, 7000);
+
+    }
+
+
+</script>
+
+  <div class="control">
+    <br>
+    <button class="button" onclick="clearInterval(mblink);clearInterval(x);gored();">Stop</button>
+  <br>
+  
+  <button class="button" onclick="clearInterval(mblink);clearInterval(x);goyellow();">Slow</button>
+  <br>
+  
+  <button class="button" onclick="clearInterval(mblink);clearInterval(x);gogreen();">Go</button>
+  <br>
+  <button class="button" onclick="clearInterval(mblink);clearInterval(x);off();">OFF</button>
+  <br> 
+  <button  class="button" onclick="clearInterval(x);mblink=setInterval(blink,2000);">BLINK</button>
+  <br>
+  <button  class="button"  onclick="normal();x=setInterval(normal,8000);">NORMAL</button> 
+  </div>
+  <div class="traffic-light">
+      <div id="stoplight" class="bulb"></div>
+      <div id="slowlight" class="bulb"></div>
+      <div id="golight" class="bulb"></div>
+  </div>
+
+</body>
+</script>
+</html>
+

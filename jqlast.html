@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Students</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="file4.css">
+    <script src="file4.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <header>
+      <p class="headerStud">STUDENTS</p>
+      <button onclick="addStud()" class="addStud">Add Student</button>
+    </header>
+    <div class="listDiv">
+      <p class="nostud">No student records found ! ! !</p>
+    </div>
+    <div class="addDiv">
+      <div class="addHead">
+        <p class="addHeading">Add Student</p>
+        <button onclick="addBack()" class="addBut">X</button>
+      </div>
+      <div class="addBody">
+        <form class="addForm" action="#" method="post">
+          <table class="addTable">
+            <tr>
+              <td>Student ID</td>
+              <td>
+                <input type="text" name="id" value="" id="addid">
+              </td>
+              <td class="errorId"><p style="margin:0;">ID Already in use</p></td>
+            </tr>
+            <tr>
+              <td>First Name</td>
+              <td>
+                <input type="text" name="fname" value="" id="addfname">
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Last Name</td>
+              <td>
+                <input type="text" name="lname" value="" id="addlname">
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>
+                <input type="email" name="email" value="" id="addemail">
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Fathers Name</td>
+              <td>
+                <input type="text" name="Ftname" value="" id="addftname">
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Fathers Number</td>
+              <td>
+                <input type="text" name="Ftnum" value="" id="addftnum">
+              </td>
+              <td></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <div class="addFooter">
+        <button type="button" class="fbutton add" onclick="checkstudid()">Submit</button>
+        <button type="button" style="display:none;"class="fbutton edit" onclick="addstudent(1)">Submit</button>
+      </div>
+    </div>
+  </body>
+</html>

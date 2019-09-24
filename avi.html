@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head> 
+
+  <title>JSON</title>
+</head>
+<body>
+  <h2>Names of Countries</h2>
+  <script>
+    var url = 'https://restcountries.eu/rest/v2/all';
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", url, true);   
+    var i;
+    xmlhttp.onload=function(){
+      var response = JSON.parse(xmlhttp.response);
+      var b;
+
+      var x=" ";
+      var i;
+      for (i in response) {
+       x+= response[i].name + "<br>"; 
+         console.log(response[i].name);
+      }
+       document.getElementById("demo").innerHTML = x;
+    console.log(response[i].name);
+}
+  xmlhttp.send();
+</script>
+<p id="demo"></p>
+</body>
+</html>

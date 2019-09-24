@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Jabong</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+<style>
+  
+  .button {
+  display: block;
+ 
+  width: 50px;
+  height:30px;
+  font-size: 15px;
+  color: black;
+  text-align: center;
+  border-radius: 20px;
+}
+.select{
+  background-color: black;
+}
+.addu {
+  display: block;
+  width: 200px;
+  height:50px;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  border-radius: 20px;
+  background-color: orange;
+  color:white;
+  left-margin:200px;
+}
+.addi {
+  display: block;
+  width: 80px;
+  height:30px;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: red;
+  color:white;
+}
+.ex{
+  border:none;
+  width:40px;
+  height:60px;
+  background-color: white;
+}
+.button:hover {
+  background-color: black;
+  color:yellow;
+  font-size:15px;
+}
+  ul {
+  list-style-type: none;
+   display: block;
+    
+   padding-right: 20px;
+     text-transform: uppercase;
+}
+li{
+  height: 19px;
+  margin-right:2px;
+   margin-left:2px;
+   float:right;
+}
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+   font-size: 10px; 
+   color:gray;
+  text-decoration: none;
+  padding-right: 5px;
+  border-right: 1px solid black;
+}
+li c {
+  display: block;
+  color: black;
+  text-align: center;
+   font-size: 14px; 
+  text-decoration: none;
+  padding-right:7px;
+}
+li d {
+  display: block;
+  color: black;
+  text-align: center;
+   font-size: 14px; 
+  text-decoration: none;
+  padding-right:20px;
+ 
+}
+    
+}
+.z{
+  display:inline;
+  float:right;
+  width:200px;
+  height:300px;
+  background-color:black;
+  text-align:center;
+  color:yellow;
+}
+
+.mySlides {display:none;};
+.active {
+  background-color:gray;
+}
+#gl{
+  float:right;
+  width:450px;
+  height:530px; 
+}
+#navbar{
+  height: 60px;
+   width: 100% ;
+   margin-top: -23px;
+  background-color: white;
+  display:block;
+overflow:hidden;
+z-index:1;
+}
+.sticky {
+  position: fixed;
+  width: 100%;
+  top:20px;
+}
+#mof{
+  background-color: #262600;
+  color:white;
+  width:100px;
+ height:200px;
+  text-align: center;
+  border-radius: 10px;
+  overflow:scroll;
+}
+#mylogin {
+width: 300px;
+text-align: center;
+background-color: gray;
+color:black;
+margin-top: 20px;
+left: 75%;
+position: fixed;
+display: none;
+
+}
+
+</style>
+
+<div style="height: 08px; width: 100%;">
+  <ul>
+<li><a  href="#home">Sign Up </a></li>
+    <li><a href="#ne" onclick="myFunction2()">Sign in</a></li>
+    <li><a href="#con">Help / Support</a></li>
+    <li><a href="#ab">Download app</a></li>
+  </ul>
+</div>
+<hr>
+
+<div id="navbar">
+<img src="jab.png" style="box-sizing: border-box; height: 55px; width: 200px; float: left; padding-top: 10px;">
+
+<div style="float: left; width: 550px;;height:40px;padding-top: 10px">
+<ul >
+<li ><c class="active" href="#home">Women</c></li>
+<li ><c  href="#news">Men</c></li>
+<li ><c  href="#contact">Kids</c></li>
+<li><c href="#about">Accessories</c></li>
+<li ><c  href="#contact">Sports</c></li>
+<li><c  href="#contact">Home & Living</c></li>
+</ul>
+</div>
+<div  style="float: right;width:100px;height:50px">
+<button class="ex";><img src="fav.png" width="30px" height="50px"  ></button>
+<button id="dark" class="ex" onclick="show()"><img src="bag.png" width="30px" height="50px"  ></button>
+</div>
+<div  style="float:right; height:60px;;width:300px;">
+<input type="text" name="search" placeholder="BE YOU. SEARCH YOUR STYLE" style="padding: 8px; margin-top: 10px; font-size: 14px;width:250px; border: 1px solid grey; background-color:#f2f2f2">
+<button type="submit" style=" height:40px;margin-top: 5px; font-size: 17px; border: 1px solid grey;"><i class="fa fa-search"></i></button>
+</div>
+</div>
+<div id=mylogin>Username : <input type="text" name="firstname"><br>
+Password : <input type="password" name="pass"><br>
+<button type="button" onclick="$('#mylogin').hide()" >Submit</button>
+</div>
+
+
+<div id=imgsel style="height: 534px; width: 828px; float: left; margin-top: 10px;">
+<div class="w3-content w3-display-container" style="margin-left:100px;width:70%; height: 100%;">
+<img class="mySlides" src="f1.webp" style="width:100%; height: 100%;">
+<img class="mySlides" src="f2.webp" style="width:100%; height: 100%;">
+<img class="mySlides" src="f3.webp" style="width:100%; height: 100%;">
+<img class="mySlides" src="f4.webp" style="width:100%; height: 100%;">
+<img class="mySlides" src="f5.webp" style="width:100%; height: 100%;">
+
+<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-black w3-display-right" style="float:left" onclick="plusDivs(1)">&#10095;</button>
+</div>
+</div>
+
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+var i;
+var x = document.getElementsByClassName("mySlides");
+if (n > x.length) {slideIndex = 1}
+if (n < 1) {slideIndex = x.length}
+for (i = 0; i < x.length; i++) {
+x[i].style.display = "none";  
+}
+x[slideIndex-1].style.display = "block";  
+}
+$('document').ready(function(){
+  initial();
+  console.log(JSON.parse(localStorage.getItem('cart')));
+});
+function initial(){
+  //console.log(JSON.parse(localStorage.getItem('cart')));
+  $('#mof').append("<br>").append($('<input type="button" class="addi" id="buttt" value="REMOVE" name="remove" onclick="remove()">'));
+  /*if(JSON.parse(localStorage.getItem('cart'))==null);
+  {
+    localStorage.setItem('cart',"[]");
+   console.log("cart set to 0");
+  }*/
+  show();
+}
+
+
+function add()
+{
+  /*,"<input type="button" class="addi" id="buttt" value="REMOVE" name="remove" onclick="remove()" "*/
+var old = JSON.parse(localStorage.getItem('cart'));
+var newcart = { name : "nike shoes"};
+
+ old.push(newcart);
+ localStorage.setItem('cart',JSON.stringify(old));
+var l = document.getElementById("display");
+$(l).empty();
+var ais = JSON.parse(localStorage.getItem('cart'));
+for(i=0;i<ais.length;i++)
+{
+$('#display').append("<br>").append(ais[i].name)
+}
+console.log(JSON.parse(localStorage.getItem('cart')));
+
+}
+function remove()
+{
+  var p = JSON.parse(localStorage.getItem('cart'));
+  p.splice(0,1);
+  localStorage.setItem('cart',JSON.stringify(p));
+
+//localStorage.removeItem('cart');
+//var u=localStorage.getItem('cart');
+//document.getElementById("display").innerHTML = u;
+//document.getElementById("display2").innerHTML = u;
+var l = document.getElementById("display");
+$(l).empty();
+var ais = JSON.parse(localStorage.getItem('cart'));
+for(i=0;i<ais.length;i++)
+{
+$('#display').append("<br>").append(ais[i].name)
+}
+}
+function show()
+
+{
+var y = document.getElementById("mof");
+if (y.style.display == "none") {
+y.style.display = "block";
+
+} else {
+y.style.display = "none";
+} 
+var l = document.getElementById("display");
+$(l).empty();
+var ais = JSON.parse(localStorage.getItem('cart'));
+for(i=0;i<ais.length;i++)
+{
+$('#display').append("<br>").append(ais[i].name)
+}
+
+};
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+function myFunction2() {
+var o = document.getElementById("mylogin");
+if (o.style.display == "none") {
+o.style.display = "block";
+} else {
+o.style.display = "none";
+}
+};
+
+      
+
+
+</script>
+
+<div id="gl">
+  <span class="z" id="mof" style="float:right;">
+    <p1 id="display"></p1>
+    <p2 id="dislay2"></p2>
+  </span>
+
+  <h1 style="font-size:20px">Nike</h1>
+  football shoes
+  <h1 style="font-size:20px">Rs.6000</h1>
+  <hr>
+  <p2 style="font-size:12px">Cash on delivery might be applicable</p2>
+  <br><br>
+  <p3 style="font-size:10px">+ Policy and Authenticity</p3>
+  <hr>
+  SIZE         
+  <p4><a href="https://www.famousfootwear.com/shoe-size-chart" style="float:right;padding-right:20px;color:lightblue">VIEW SIZE CHART</a></p4>
+  <ul >
+<li ><d class="active" href="#home"> <button class="button">33</button></d></li>
+<li ><d  href="#home"> <button class="button" onclick="">34</button></d></li>
+<li ><d  href="#home"> <button class="button" onclick="">35</button></d></li>
+<li ><d  href="#home"> <button class="button" onclick="">36</button></d></li>
+<li ><d  href="#home"> <button class="button" onclick="">37</button></d></li>
+</ul>
+<br><br><br>
+<button class="addu" onclick='add()'>ADD TO CART</button>
+</div>
+      <div  style="height: 100%; width: 100%; background-color: white; clear: both;">
+      <div  style="width: 70%;">
+<div style="text-align: center; padding-top: 10px; padding-bottom: 10px;"><span style="font-weight: bold; font-size: 20px;">PRODUCT INFO & CARE</span><br>
+<img src="nike.png" style="width: 100px; height: 100px; padding-top: 10px;">
+</div>
+</div>
+
+<div style="width: 65%; padding-left: 10%;color:gray;">
+<p>Crafted to perfection with studs for superior ball control and firm grip on artificial grass and hard ground, this pair of white ‘Nemeziz 17.4 TF’ football shoes from adidas will let your little buddy be the champion of every match. Effortlessly stylish for its all-over graphic stripes and eye-catching 3-stripes, this pair of shoes has flexible, traction-configured synthetic upper that ensure ultimate ball control. It also has breathable mesh lining and comfortable rubber sole and Nemeziz and adidas branding at the back.</p>
+<p>Shoe CareSurface Dirt can be cleaned with a good quality brush or a damp cloth.</p>
+
+<table>
+<tr>
+<td style="width: 200px; height: 75px;">Material & Care</td>
+<td style="height: 75px;">Surface Dirt can be cleaned with a good quality brush or a damp cloth.</td>
+</tr>
+
+<tr>
+<td style="width: 200px; height: 75px;">Manufacturer Detail</td>
+<td style="height: 75px;">Imported By: Adidas India Marketing Private Ltd. Office No.6, 2Nd Floor, Sector-B, Pocket-7, Plot No-11, Vasant Kunj, New Delhi-110070</td>
+</tr>
+
+<tr>
+<td style="width: 200px; height: 50px;">Country Of Origin</td>
+<td style="height: 50px;">Cambodia</td>
+</tr>
+
+<tr>
+<td style="width: 200px; height: 50px;">Cleats</td>
+<td style="height: 50px;">Fixed</td>
+</tr>
+
+<tr>
+<td style="width: 200px; height: 50px;">Warranty</td>
+<td style="height: 50px;">3 months</td>
+</tr>
+
+<tr>
+<td style="width: 200px; height: 50px;">Material</td>
+<td style="height: 50px;">Synthetic</td>
+</tr>
+
+<tr>
+<td style="width: 200px; height: 50px;">Fastening</td>
+<td style="height: 50px;">Lace-Ups</td>
+</tr>
+
+<tr>
+<td style="width: 200px; height: 50px;">Product Code</td>
+<td style="height: 50px;">5551338</td>
+</tr>
+</table>
+</div>
+</div>
+</body>
+</html>
